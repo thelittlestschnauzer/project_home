@@ -14,6 +14,10 @@
 .btn-block {
   background-color: #EDDAE1;
   border: 1px solid #B7B7B7;
+  box-shadow: 10px 5px 5px #B7B7B7;
+  &:hover {
+    background-color: #B7B7B7;
+  }
 }
 .social-media-links {
   text-transform: uppercase;

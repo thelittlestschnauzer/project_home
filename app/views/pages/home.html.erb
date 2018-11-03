@@ -1,0 +1,23 @@
+<section class="home-hero">
+  <div class="content content--bounded">
+    <div class="home-hero-titles">
+      <h1 class="home-hero-title">
+        <span class="home-hero-title-main">
+          Household Management Simplified
+        </span>
+      </h1>
+      <h3 class="home-hero-subtitle">
+        Let's boost your productivity
+      </h3>
+    </div><!-- home hero titles -->
+    <div class="home-hero-frame">
+      <%= image_tag("/assets/coverkitchen.jpg", alt: "image", class: "home-hero-screenshot" ) %>
+    </div>
+  </div><!-- content content bounded-->
+  <div class="home-signUp">
+    <h3 class="home-signUp-title">
+      Sign up it's free!
+    </h3>
+    <%= link_to 'Sign Up', signup_path, class: 'welcome-button btn' %>
+  </div>
+</section>

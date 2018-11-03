@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/pages", to: 'pages#home'
+  
   root to: "rooms#index"
 
   devise_scope :user do
