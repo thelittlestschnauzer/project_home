@@ -1,0 +1,13 @@
+.navbar {
+  height: 80px;
+  .navbar-brand {
+    color: #3e4147;
+    font-size: 2em;
+  }
+  a.nav-link {
+    color: #3e4147;
+    &:hover {
+      color: #B7B7B7;
+    }
+  }
+}
