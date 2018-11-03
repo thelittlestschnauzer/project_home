@@ -1,66 +1,43 @@
-section .home-hero {
-  background-color: #fff;
-  padding-top: 4em;
+.home-hero {
+  background: url(asset_path("Artboard2.png"));
+  position: absolute;
+  height: 90%;
+  width: 100%;
   border-top: 1px solid #EDDAE1;
-  .content {
-    width: 100%;
-    .content--bounded {
-      max-width: 60em;
-      margin: 0 auto;
-      padding-left: 2.5em;
-      padding-right: 2.5em;
-    }
-  }
 }
+
 .home-hero-title {
-  // margin-bottom: 1em;
-  color: #eed9e0;
-  font-size: 3.5em;
+  margin-top: 300px;
+  color: #3e4147;
+  font-size: 3.0em;
   text-align: center;
   text-transform: uppercase;
   span.home-hero-title-main {
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 .home-hero-subtitle {
   color: #3e4147;
   font-weight: 300;
-  margin-bottom: 1.3125em;
+  margin-bottom: 4.3125em;
   text-align: center;
   text-transform: uppercase;
-}
-
-.home-hero-frame {
-
-  .home-hero-screenshot {
-    // height: 450px;
-    // width: 85%;
-  }
-}
-
-img.home-hero-screenshot {
-  height: 450px;
-  width: 100%;
-  text-align: center;
 }
 
 .home-signUp {
-  background-color: #3e4147;
-  color: #efefef;
+  color: #3e4147;
   text-transform: uppercase;
-  display: flex;
+  display: block;
   padding: 1em 2em;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: auto;
+  text-align: center;
   h3 {
-    margin: .25em 1.125em .25em;
+    font-weight: 300;
     white-space: nowrap;
   }
   .welcome-button {
     background-color: #cba94f;
-    width: 20%;
+    width: 10%;
     border: 1px solid #cba94f;
     color: #efefef;
     &:hover {

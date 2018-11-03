@@ -1,2 +1,8 @@
-<h1>Room#index</h1>
-<p>Find me in app/views/room/index.html.erb</p>
+<% if user_signed_in? %>
+
+  <h1>Room#index</h1>
+  <p>Find me in app/views/room/index.html.erb</p>
+
+  <% else %>
+    <%= render 'pages/home' %>
+  <% end %> 
