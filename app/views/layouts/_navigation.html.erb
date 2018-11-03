@@ -4,14 +4,21 @@
 
   </ul>
   <ul class="navbar-nav align-self-center">
-    <li class="nav-item">
-      <a class="nav-link" href="#">ABOUT</a>
-    </li> 
-    <li class="nav-item">
-      <a class="nav-link" href="#">SIGN UP</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">LOG IN</a>
-    </li>
-  </ul>
+    <% if user_signed_in? %>
+    Welcome <strong><%= current_user.name %></strong>.
+      <li class="nav-item">
+        <%= link_to "ABOUT", edit_user_registration_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to "SIGN UP", signup_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "LOG IN", login_path, class: "nav-link" %>
+      </li>
+    </ul>
+    <% end %>
 </nav>
