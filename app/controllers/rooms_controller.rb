@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
 
+
   def index
     @rooms = Room.all
     @room = Room.new
@@ -13,6 +14,11 @@ class RoomsController < ApplicationController
       render :index
     end
   end
+
+  def show
+    @room = Room.find(params[:id])
+  end
+
 
   private
 

@@ -17,3 +17,17 @@ document.addEventListener('turbolinks:load', function () {
     }, false)
   }
 })
+
+
+roomForm.addEventListener('ajax:error', function (xhr, status, err) {
+  console.log(xhr)
+
+  roomTitle.classList.add('is-invalid')
+
+  var errorNode = document.createElement('div')
+  var errorTextNode = document.createTextNode('Name cannot be blank')
+  errorNode.classList.add('invalid-feedback')
+  errorNode.appendChild(errorTextNode)
+
+  roomTitle.parentNode.insertBefore(errorNode, roomTitle.nextSibling)
+})
