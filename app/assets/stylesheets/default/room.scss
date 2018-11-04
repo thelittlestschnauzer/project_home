@@ -12,7 +12,7 @@ main.container {
   }
 }
 
-.room-col {
+.room-col, .feature-col {
   margin-bottom: 1.5rem;
 }
 
@@ -44,7 +44,7 @@ main.container {
   display: none;
 }
 
-.room-card {
+.room-card, .feature-card {
   display: block;
   color: #3e4147;
   background-color: #EDDAE1;
@@ -67,3 +67,26 @@ main.container {
       font-size: 1.2rem;
     }
   }
+
+.room-title {
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #B7B7B7;
+  }
+  img {
+    text-align: center;
+    display: block;
+    width: 48px;
+    margin: 0 auto 1rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+  }
+}

@@ -1,5 +1,5 @@
 <div class="col-md-4 room-col">
-  <a href="#" class="room-card">
+  <%= link_to(room, class: "room-card") do %>
     <h4><%= room.title %></h4>
-  </a>
+  <% end %>
 </div>
