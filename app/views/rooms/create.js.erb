@@ -1,0 +1,12 @@
+var roomList = document.getElementById('room-list')
+var roomPopover = document.getElementById('new-room-popover')
+var roomTitleInput = document.getElementById('room-title-input')
+var newRoom = '<%= excape_javascript(render "room_card.html", room: @room) %>'
+
+var div = document.createElement('div')
+
+div.innerHTML = newRoom
+
+roomList.appendChild(div.firstChild)
+roomPopover.classList.add('is-hidden')
+roomTitleInput.value = ''

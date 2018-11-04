@@ -3,11 +3,13 @@
     <div class="col-md-1 mr-auto">
       <button id="new-room-button" class="btn btn-primary mr-auto">New</button>
       <div id="new-room-popover" class="room-popover is-hidden">
+        <%= form_with(model: @room) do |f| %>
         <div class="form-group">
-          <input type="text" placeholder="Name Your Room" class="form-control">
+          <%= f.text_field :title, class: "form-control", id: "room-title-input", placeholder:"Name Your Room", autoFocus: true %>
         </div>
-        <button type="submit" class="btn btn-success">Save</button>
+        <%= f.submit "Save", class: "btn btn-success" %>
         <button id="cancel-room-popover" class="btn btn-secondary">Cancel</button>
+        <% end %>
       </div>
     </div>
       <div class="col-md-4">
@@ -17,25 +19,9 @@
         <button class="btn ml-auto">...</button>
       </div>
     </div>
-    <div class="row home-rooms">
-      <div class="col-md-4 room-col">
-        <a href="#" class="room-card">
-          <h4>Kitchen</h4>
-          <p>Everyone loves a farmhouse kitchen</p>
-        </a>
-      </div>
-      <div class="col-md-4 room-col">
-        <a href="#" class="room-card">
-          <h4>Kitchen</h4>
-          <p>Everyone loves a farmhouse kitchen</p>
-        </a>
-      </div>
-      <div class="col-md-4 room-col">
-        <a href="#" class="room-card">
-          <h4>Kitchen</h4>
-          <p>Everyone loves a farmhouse kitchen</p>
-        </a>
-      </div>
-
+    <div id="room-list" class="row home-rooms">
+      <% @rooms.each do |room| %>
+        <%= render "room_card", room: room %>
+      <% end %>
   </div>
 </main>
