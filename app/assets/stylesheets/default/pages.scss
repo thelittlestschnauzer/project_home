@@ -36,15 +36,11 @@
     white-space: nowrap;
   }
   .welcome-button {
-    background-color: #cba94f;
+    background-color: #3e4147;
     width: 10%;
-    border: 1px solid #cba94f;
-    color: #efefef;
+    color: #fff;
     &:hover {
       background: #eed9e0;
-    }
-    a {
-      color: #efefef;
     }
   }
 }

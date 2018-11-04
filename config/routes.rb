@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
+  root to: 'rooms#index'
+
   get "/pages", to: 'pages#home'
-  
-  root to: "rooms#index"
 
   devise_scope :user do
     get 'signup', to: 'devise/registrations#new'
@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'
+  end
+
+  devise_scope :user do
+    get 'logout', to: 'devise/sessions#destroy'
   end
 
 

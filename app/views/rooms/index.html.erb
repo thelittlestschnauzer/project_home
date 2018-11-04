@@ -1,8 +1,41 @@
-<% if user_signed_in? %>
+<main class="container home">
+  <div class="row home-header">
+    <div class="col-md-1 mr-auto">
+      <button id="new-room-button" class="btn btn-primary mr-auto">New</button>
+      <div id="new-room-popover" class="room-popover is-hidden">
+        <div class="form-group">
+          <input type="text" placeholder="Name Your Room" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <button id="cancel-room-popover" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+      <div class="col-md-4">
+        <h3 class="text-center">Rooms</h3>
+      </div>
+      <div class="col-md-1 ml-auto">
+        <button class="btn ml-auto">...</button>
+      </div>
+    </div>
+    <div class="row home-rooms">
+      <div class="col-md-4 room-col">
+        <a href="#" class="room-card">
+          <h4>Kitchen</h4>
+          <p>Everyone loves a farmhouse kitchen</p>
+        </a>
+      </div>
+      <div class="col-md-4 room-col">
+        <a href="#" class="room-card">
+          <h4>Kitchen</h4>
+          <p>Everyone loves a farmhouse kitchen</p>
+        </a>
+      </div>
+      <div class="col-md-4 room-col">
+        <a href="#" class="room-card">
+          <h4>Kitchen</h4>
+          <p>Everyone loves a farmhouse kitchen</p>
+        </a>
+      </div>
 
-  <h1>Room#index</h1>
-  <p>Find me in app/views/room/index.html.erb</p>
-
-  <% else %>
-    <%= render 'pages/home' %>
-  <% end %> 
+  </div>
+</main>

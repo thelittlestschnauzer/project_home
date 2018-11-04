@@ -1,3 +1,69 @@
-// Place all the styles related to the Room controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+main.container {
+  margin-top: 4rem;
+}
+
+.home {
+  h3 {
+    color: #4F5A5E;
+  }
+
+  .home-header {
+    margin-bottom: 3rem;
+  }
+}
+
+.room-col {
+  margin-bottom: 1.5rem;
+}
+
+.room-popover {
+  width: 220px;
+  position: absolute;
+  top: 3rem;
+  border-radius: 5px;
+  box-shadow: 5px 3px 2px #B7B7B7;
+  z-index: 1;
+  background-color: #EDDAE1;
+  padding: 1rem 1rem 2rem;
+  input {
+  text-transform: uppercase;
+  }
+  .btn {
+    background-color: #B7B7B7;
+    border: 1px solid #B7B7B7;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #3e4147;
+    }
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.room-card {
+  display: block;
+  color: #3e4147;
+  background-color: #EDDAE1;
+  box-shadow: 5px 3px 3px #B7B7B7;
+  border-radius: 5px;
+  padding: 1.5rem;
+  height: 100%;
+
+  &:hover {
+    text-decoration: none;
+    color: #B7B7B7;
+  }
+
+    h4 {
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }

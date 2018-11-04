@@ -3,11 +3,12 @@
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
+
       <div class="field">
-        <%= f.text_field :name, autofocus: true, class: "form-control mb-4", placeholder: "NAME" %>
+        <%= f.text_field :name, class: "form-control mb-4", placeholder: "NAME" %>
       </div>
       <div class="field">
-        <%= f.email_field :email, autofocus: true, class: "form-control mb-4", placeholder: "E-MAIL" %>
+        <%= f.email_field :email, class: "form-control mb-4", placeholder: "E-MAIL" %>
       </div>
       <div class="field">
         <% if @minimum_password_length %>
@@ -19,9 +20,9 @@
         <%= f.password_field :password_confirmation, class: "form-control mb-4", placeholder: "PASSWORD-CONFIRMATION" %>
       </div>
       <div class="actions">
-        <%= f.submit "SIGN UP", class: "btn btn-info my-4 btn-block" %>
+        <%= f.submit "SIGN UP", class: "btn btn-info my-4 btn-block", data: { disable_with: false } %>
       </div>
-      <p class="social-media-links">or sign up with: </p>
+      <!-- <p class="social-media-links">or sign up with: </p>
       <a type="button" class="light-blue-text mx-2">
           <i class="fa fa-facebook"></i>
       </a>
@@ -33,7 +34,7 @@
       </a>
       <a type="button" class="light-blue-text mx-2">
           <i class="fa fa-github"></i>
-      </a>
+      </a> -->
 
     <hr>
     <em class="devise-links">Already have an account? <%= render "devise/shared/links" %></em>
