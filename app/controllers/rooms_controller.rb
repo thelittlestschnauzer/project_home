@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to rooms_path(@room)
+      redirect_to rooms_dashboard_path(@room)
     else
       render :index
     end

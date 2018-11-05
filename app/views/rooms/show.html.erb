@@ -1,10 +1,15 @@
+
+
 <main class="container home">
-  <h1 class="text-center">
+
+  <h1 class="text-center room-heading">
     <%= @room.title %>
   </h1>
+
   <div class="row">
-    <%= render "feature_card", feature_link: '', title: "Message Board", img_src: "messages", img_alt: "Messages", description: "Leave a message" %>
-    <%= render "feature_card", feature_link: '', title: "Chores", img_src: "chores", img_alt: "Chores", description: "Lists of chores to tidy the house" %>
-    <%= render "feature_card", feature_link: '', title: "Schedule", img_src: "schedule", img_alt: "Schedule", description: "Important Dates go here!" %>
+    <%= render "message_card", feature_link: '', title: "Message Board", img_src: "messages.png", img_alt: "Messages", description: "Leave a message" %>
+    <%= render "chore_card", feature_link: '', title: "Chores", img_src: "chores.png", img_alt: "Chores", description: "Lists of chores to tidy the house" %>
+    <%= render "schedule_card", feature_link: '', title: "Schedule", img_src: "schedule.png", img_alt: "Schedule", description: "Important Dates go here!" %>
   </div>
+
 </main>
