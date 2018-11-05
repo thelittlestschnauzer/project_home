@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    <%= render "layouts/navigation" %>
     <% if notice %>
       <p class="notice"><%= notice %></p>
     <% end %>
@@ -22,7 +23,6 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
-    <%= render "layouts/navigation" %>
 
     <%= yield %>
 

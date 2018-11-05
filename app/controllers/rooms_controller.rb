@@ -3,13 +3,14 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.all
-    @room = Room.new
+    @room = current_user.rooms.new
+    @list = @room.lists.build
   end
 
   def create
-    @room = Room.new(room_params)
+    @room = current_user.rooms.new(room_params)
     if @room.save
-      redirect_to rooms_dashboard_path(@room)
+      redirect_to rooms_path(@room)
     else
       render :index
     end
@@ -23,6 +24,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:title)
+    params.require(:room).permit(:title, lists_attributes: [:id, :title])
   end
 end
