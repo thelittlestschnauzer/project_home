@@ -1,14 +1,27 @@
 
-
 <main class="container home">
-
-  <h1 class="text-center room-heading">
-    <%= @room.title %>
-  </h1>
-
-  <div class="row">
-    <%= render "message_card", feature_link: '', title: "Message Board", img_src: "messages.png", img_alt: "Messages", description: "Leave a message" %>
-    <%= render "chore_card", feature_link: '', title: "Chores", img_src: "chores.png", img_alt: "Chores", description: "Lists of chores to tidy the house" %>
-    <%= render "schedule_card", feature_link: '', title: "Schedule", img_src: "schedule.png", img_alt: "Schedule", description: "Important Dates go here!" %>
+  <div class="row home-header">
+    <div class="col-md-1 mr-auto">
+      <button id="new-room-button" class="btn btn-primary mr-auto">ADD Room</button>
+      <div id="new-room-popover" class="room-popover is-hidden">
+        <%= form_for([@room, @list]) do |f| %>
+        <div class="form-group">
+          <%= f.text_field :list_title, class: "form-control", id: "room-title-input", placeholder:"Chore List", autoFocus: true %>
+        </div>
+          <%= f.submit "Save", class: "btn btn-success" %>
+        <button id="cancel-room-popover" class="btn btn-secondary">Cancel</button>
+        <% end %>
+      </div>
+    </div>
+      <div class="col-md-4">
+        <h3 class="text-center header-for-rooms"><%= @room.title %></h3>
+      </div>
+      <div class="col-md-1 ml-auto">
+      </div>
+    </div>
+    <div id="room-list" class="row home-rooms">
+      <% @room.lists.each do |list| %>
+        <%= render "list_card", list: list %>
+      <% end %>
   </div>
 </main>

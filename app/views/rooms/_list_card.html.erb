@@ -1,7 +1,6 @@
-
 <div class="col-md-4 feature-col">
   <div class="feature-room-card">
-  <h4><%= link_to room.title, room_path(room), class: "room-title" %></h4>
+  <h4><%= list.list_title %></h4>
         <section class="card-body">
           <div class="card-body-content">
             <object class="card-icon">
@@ -13,9 +12,8 @@
                   </div>
                 </div>
                   <ul class="chores-remaining">
-                    <% @room.lists.each do |list| %>
-                    <li class="chore"><%= list.list_title %></li>
-                    <% end %>
+                    
+                    <li class="chore"></li>
                     </ul>
                   </article>
                 </object>
@@ -23,3 +21,5 @@
         </section><!--card-body -->
       </div>
     </div>
+
+

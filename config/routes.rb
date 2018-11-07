@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'rooms#index'
+
+  resources :tasks
+
+  resources :rooms do
+    resources :lists
+  end
 
 
   devise_scope :user do
@@ -9,11 +16,6 @@ Rails.application.routes.draw do
     get 'login', to: 'devise/sessions#new'
   end
 
-  root to: 'rooms#index'
-  
-  resources :rooms do
-    resources :lists
-  end
 
   get "/pages", to: 'pages#home'
 

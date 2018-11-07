@@ -18,6 +18,26 @@ document.addEventListener('turbolinks:load', function () {
   }
 })
 
+document.addEventListener('turbolinks:load', function () {
+  const openListButton = document.getElementById('new-list-button')
+  const listPopover = document.getElementById('new-list-popover')
+
+  if (openListButton && listPopover) {
+
+    openListButton.addEventListener('click', function () {
+
+      return listPopover.classList.contains('is-hidden') ?
+      listPopover.classList.remove('is-hidden') : null
+    }, false)
+
+    const cancelListPopover = document.getElementById('cancel-list-popover')
+    cancelListPopover.addEventListener('click', function () {
+
+      return listPopover.classList.add('is-hidden')
+    }, false)
+  }
+})
+
 
 roomForm.addEventListener('ajax:error', function (xhr, status, err) {
   console.log(xhr)

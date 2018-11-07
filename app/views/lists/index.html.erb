@@ -1,6 +1,6 @@
 
 <main class="container home">
-  
+
   <div class="col-md-1 mr-auto">
     <button id="new-room-button" class="btn btn-primary mr-auto">New</button>
     <div id="new-room-popover" class="room-popover is-hidden">
@@ -13,12 +13,9 @@
         <% end %>
       </div>
     </div>
-      <div class="col-md-4">
-        <h3 class="text-center">Chores</h3>
-      </div>
-      <div class="col-md-1 ml-auto">
-        <button class="btn ml-auto">...</button>
-      </div>
+
+        <h3 class="text-center static-header">Chores</h3>
+
 
     <div class="row">
       <% @room.lists.each do |list| %>

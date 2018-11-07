@@ -1,7 +1,7 @@
 <main class="container home">
   <div class="row home-header">
     <div class="col-md-1 mr-auto">
-      <button id="new-room-button" class="btn btn-primary mr-auto">New</button>
+      <button id="new-room-button" class="btn btn-primary mr-auto">ADD Room</button>
       <div id="new-room-popover" class="room-popover is-hidden">
         <%= form_with(model: @room) do |f| %>
         <div class="form-group">
@@ -13,10 +13,9 @@
       </div>
     </div>
       <div class="col-md-4">
-        <h3 class="text-center">Rooms</h3>
+        <h3 class="text-center header-for-rooms">Clean House</h3>
       </div>
       <div class="col-md-1 ml-auto">
-        <button class="btn ml-auto">...</button>
       </div>
     </div>
     <div id="room-list" class="row home-rooms">

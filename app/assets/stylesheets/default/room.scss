@@ -12,6 +12,12 @@ main.container {
   }
 }
 
+.header-for-rooms {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
 .room-col, .feature-col {
   margin-bottom: 1.5rem;
 }
@@ -38,6 +44,21 @@ main.container {
       background-color: #3e4147;
     }
   }
+}
+
+#new-room-button {
+  background-color: #EBC5C4;
+  width: 190%;
+  border: 1px solid #EBC5C4;
+  text-transform: uppercase;
+}
+
+button#new-list-button.btn-small {
+  text-transform: uppercase;
+  background-color: #EBC5C4;
+  border-radius: 5px;
+  color: #FDFDFB;
+  border: 1px solid #FDFDFB;
 }
 
 .is-hidden {
@@ -90,6 +111,36 @@ main.container {
   p {
     text-align: center;
   }
+}
+
+.feature-room-card {
+  display: block;
+  color: #3e4147;
+  background-color: #fff;
+  box-shadow: 5px 3px 3px #B7B7B7;
+  border-radius: 5px;
+  padding: 1.5rem;
+  height: 100%;
+  border: 1px solid #d9d9d9;
+  h4 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #F0F0F1;
+    a {
+    color: #4A4D4F;
+    &:hover {
+      text-decoration: none;
+      color: #EBC5C4;
+      }
+    }
+  }
+  h3 {
+    font-size: 1em;
+  }
+}
+
+.room-title a {
+  text-align: center;
 }
 
 /************** Show page for individual rooms ************************/
